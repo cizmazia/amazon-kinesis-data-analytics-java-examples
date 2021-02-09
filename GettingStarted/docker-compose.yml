@@ -1,0 +1,15 @@
+version: '3'
+services:
+  localstack:
+    image: localstack/localstack:0.11.4
+    ports:
+      - "4566-4584:4566-4584"
+    environment:
+      - SERVICES=kinesis
+      - HOSTNAME=localstack
+      - DEFAULT_REGION=us-west-2
+      - AWS_CBOR_DISABLE=true # localstack:0.12.0 added CBOR support for kinesis
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - "./tmp/localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

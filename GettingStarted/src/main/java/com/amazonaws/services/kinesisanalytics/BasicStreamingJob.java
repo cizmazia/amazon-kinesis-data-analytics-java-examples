@@ -4,9 +4,9 @@ import com.amazonaws.services.kinesisanalytics.runtime.KinesisAnalyticsRuntime;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.connectors.kinesis.FlinkKinesisConsumer;
-import org.apache.flink.streaming.connectors.kinesis.FlinkKinesisProducer;
-import org.apache.flink.streaming.connectors.kinesis.config.ConsumerConfigConstants;
+import software.amazon.kinesis.connectors.flink.FlinkKinesisConsumer;
+import software.amazon.kinesis.connectors.flink.FlinkKinesisProducer;
+import software.amazon.kinesis.connectors.flink.config.ConsumerConfigConstants;
 
 import java.io.IOException;
 import java.util.Map;
